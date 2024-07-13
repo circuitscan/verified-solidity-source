@@ -37,7 +37,7 @@ const apiUrls = {
   1: 'https://api.etherscan.io/api',
   10: 'https://api-optimistic.etherscan.io/api',
   137: 'https://api.polygonscan.com/api',
-  2442: 'https://api-testnet-zkevm.polygonscan.com/api',
+  2442: 'https://api-cardona-zkevm.polygonscan.com/api',
   250: 'https://api.ftmscan.com/api',
   42161: 'https://api.arbiscan.io/api',
   42170: 'https://api.arbiscan.io/api',

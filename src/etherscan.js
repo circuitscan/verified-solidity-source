@@ -1,4 +1,7 @@
 export default async function(address, chainId = 1) {
+  if(!apiUrls.hasOwnProperty(String(chainId)))
+    throw new Error('invalid_etherscan_chain_id');
+
   // No API key required to fetch source
   const resp = await fetch(
     apiUrls[chainId] +
@@ -36,11 +39,14 @@ const apiUrls = {
   11155111: 'https://api-sepolia.etherscan.io/api',
   1: 'https://api.etherscan.io/api',
   10: 'https://api-optimistic.etherscan.io/api',
+  11155420: 'https://api-sepolia-optimistic.etherscan.io/api',
   137: 'https://api.polygonscan.com/api',
+  80002: 'https://api-amoy.polygonscan.com/api',
   2442: 'https://api-cardona-zkevm.polygonscan.com/api',
   250: 'https://api.ftmscan.com/api',
   42161: 'https://api.arbiscan.io/api',
   42170: 'https://api.arbiscan.io/api',
+  421614: 'https://api-sepolia.arbiscan.io/api',
   100: 'https://api.gnosisscan.io/api',
   42220: 'https://api.celoscan.io/api',
   8453: 'https://api.basescan.org/api'
